@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Photobooth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <br>
+    <h1 >Luigi's Photobooth</h1>
+    
+    <div id="photoCounter"></div>
+
+<div class="top-section" id="cameraSection">
+    <div class="camera-section">
+        <div class="camera-container">
+            <video id="camera" autoplay playsinline></video>
+            <div id="countdown"></div>
+        </div>
+        <br>
+        <div class="buttons">
+                <button id="startCamera">Start Camera</button>              
+                <button id="takePhoto">Take Photo</button>
+            <div class="color-picker">
+                <label for="bgColor">Background Color</label>
+                <input type="color" id="bgColor" value="#f4f1ea">
+            </div>
+            
+        </div>
+        
+        <div class="filter-control">
+            <label for="filter">Filter:</label>
+            <select id="filter">
+            <option value="none">Normal</option>
+            <option value="grayscale">Grayscale</option>
+            <option value="sepia">Sepia</option>
+            <option value="brightness">Bright</option>
+            </select>
+        </div>
+
+        <div class="photo-count-control">
+            <label for="photoCount">Number of Photos:</label>
+            <select id="photoCount">
+            <option value="3">3 Photos</option>
+            <option value="4">4 Photos</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="preview-section">
+        <h2>Latest Photo</h2>
+        <canvas id="photo"></canvas>
+    </div>
+
+</div>
+
+<div id="countdown"></div>
+<div id="photoCounter"></div>
+<br>   
+<br>
+<br>
+<br>
+   <div class="photo-strip-section">
+<div class="strip-section">
+
+    <canvas id="photoStrip"></canvas>
+    <div class="photo-actions">
+        <br>
+        <br>
+    <button id="retakePhoto">Retake</button>
+    <button id="downloadPhoto">Download Photo</button>
+    </div>
+    
+    <div class="strip-color-picker">
+    <label for="stripColor">Photo Strip Color:</label>
+    <input type="color" id="stripColor" value="#ffffff">
+    </div>
+</div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
